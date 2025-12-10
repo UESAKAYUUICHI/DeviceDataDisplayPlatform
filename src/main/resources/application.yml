@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: DeviceDataDisplayPlatform
+  datasource:
+    url: jdbc:mysql://localhost:3366/industrialequipmentdata?serverTimezone=UTC
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 0721
+
+# mybatis print sql order
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
