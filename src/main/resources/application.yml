@@ -2,14 +2,25 @@ spring:
   application:
     name: DeviceDataDisplayPlatform
   datasource:
-    url: jdbc:mysql://localhost:3366/industrialequipmentdata?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3366/industrialequipmentdata?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     username: root
     password: ""
     driver-class-name: com.mysql.cj.jdbc.Driver
-server:
-  port: 0721
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
 
-# mybatis print sql order
+server:
+  port: 10721
+
+# mybatis plus configuration
 mybatis-plus:
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      
+logging:
+  level:
+    com.devicedatadisplayplatform.module.customer.mapper: debug
