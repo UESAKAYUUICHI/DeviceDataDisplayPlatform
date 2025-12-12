@@ -3,9 +3,12 @@ package com.devicedatadisplayplatform.module.customer.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.devicedatadisplayplatform.common.result.Result;
 import com.devicedatadisplayplatform.common.util.ConvertUtil;
+import com.devicedatadisplayplatform.module.customer.DTO.UserGetPermissionDTO;
 import com.devicedatadisplayplatform.module.customer.Form.UserForm;
 import com.devicedatadisplayplatform.module.customer.domain.User;
+import com.devicedatadisplayplatform.module.customer.service.UserGetPermissionService;
 import com.devicedatadisplayplatform.module.customer.service.UserService;
+import com.devicedatadisplayplatform.module.customer.vo.UserGetPermissionVO;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +20,9 @@ public class UserController {
 
     @Resource
     private UserService userService;
+
+    @Resource
+    private UserGetPermissionService userGetPermissionService;
     
     @GetMapping("/listUser")
     public Result<List<User>> getAllUsers() {
@@ -68,5 +74,15 @@ public class UserController {
         } else {
             return Result.fail("用户删除失败");
         }
+    }
+
+        @GetMapping("/getUserGetPermission")
+    public Result<UserGetPermissionVO> getUserGetPermission(@RequestParam Integer userId) {
+        //获取dto
+        UserGetPermissionDTO dto = userGetPermissionService.getUserGetPermission(userId);
+        //dto转化为vo,用了我的自定义工具类转化了一下
+        UserGetPermissionVO vo = ConvertUtil.convert(dto, UserGetPermissionVO.class);
+        //返回vo
+        return Result.ok(vo);
     }
 }

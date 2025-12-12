@@ -2,7 +2,6 @@ package com.devicedatadisplayplatform.module.customer.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.devicedatadisplayplatform.module.customer.domain.User;
-import com.devicedatadisplayplatform.module.customer.vo.UserContextVO;
 
 import java.util.List;
 
