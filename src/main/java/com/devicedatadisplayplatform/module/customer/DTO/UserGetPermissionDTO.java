@@ -2,6 +2,7 @@ package com.devicedatadisplayplatform.module.customer.DTO;
 
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -15,7 +16,10 @@ public class UserGetPermissionDTO {
     public static class ProjectDTO {
         private Integer projectId;
         private String projectName;
+        private String mainDeviceId;
         private String status;
+        private Date createdAt;
+        private Date updatedAt;
     }
 
     @Data

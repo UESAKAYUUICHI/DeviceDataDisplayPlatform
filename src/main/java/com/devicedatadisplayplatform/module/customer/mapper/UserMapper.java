@@ -13,7 +13,7 @@ import java.util.List;
 public interface UserMapper extends BaseMapper<User> {
     // 查询用户关联的项目列表 (通过 t_user_project 关联 t_project)
     @Select({
-            "SELECT p.project_id, p.project_name, p.status ",
+            "SELECT p.project_id, p.project_name, p.main_device_id, p.status, p.created_at, p.updated_at ",
             "FROM t_project p ",
             "JOIN t_user_project up ON p.project_id = up.project_id ",
             "WHERE up.user_id = #{userId}"

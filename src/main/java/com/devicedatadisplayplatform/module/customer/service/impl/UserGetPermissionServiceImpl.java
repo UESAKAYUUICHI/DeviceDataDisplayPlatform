@@ -43,7 +43,10 @@ public class UserGetPermissionServiceImpl implements UserGetPermissionService {
                     UserGetPermissionDTO.ProjectDTO item = new UserGetPermissionDTO.ProjectDTO();
                     item.setProjectId(p.getProjectId());
                     item.setProjectName(p.getProjectName());
+                    item.setMainDeviceId(p.getMainDeviceId());
                     item.setStatus(p.getStatus());
+                    item.setCreatedAt(p.getCreatedAt());
+                    item.setUpdatedAt(p.getUpdatedAt());
                     return item;
                 })
                 .collect(Collectors.toList()));
