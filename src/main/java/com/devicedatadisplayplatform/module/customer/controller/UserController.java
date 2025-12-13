@@ -4,11 +4,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.devicedatadisplayplatform.common.result.Result;
 import com.devicedatadisplayplatform.common.util.ConvertUtil;
 import com.devicedatadisplayplatform.module.customer.DTO.UserGetPermissionDTO;
-import com.devicedatadisplayplatform.module.customer.Form.UserForm;
+import com.devicedatadisplayplatform.module.customer.form.UserForm;
 import com.devicedatadisplayplatform.module.customer.domain.User;
 import com.devicedatadisplayplatform.module.customer.service.UserGetPermissionService;
 import com.devicedatadisplayplatform.module.customer.service.UserService;
-import com.devicedatadisplayplatform.module.customer.vo.UserGetPermissionVO;
+import com.devicedatadisplayplatform.module.customer.Vo.UserGetPermissionVO;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -81,7 +81,7 @@ public class UserController {
         //获取dto
         UserGetPermissionDTO dto = userGetPermissionService.getUserGetPermission(userId);
         //dto转化为vo,用了我的自定义工具类转化了一下
-        UserGetPermissionVO vo = ConvertUtil.convert(dto, UserGetPermissionVO.class);
+        UserGetPermissionVO vo = ConvertUtil.convertIgnoreExtraFields(dto, UserGetPermissionVO.class);
         //返回vo
         return Result.ok(vo);
     }

@@ -1,4 +1,4 @@
-package com.devicedatadisplayplatform.module.customer.vo;
+package com.devicedatadisplayplatform.module.customer.Vo;
 
 import com.devicedatadisplayplatform.module.customer.DTO.UserGetPermissionDTO;
 import lombok.Data;
@@ -15,10 +15,11 @@ public class UserGetPermissionVO {
 
     @Data
     public static class ProjectDTO {
-        private Integer projectId;
+        private String projectId;  // 修改为String类型
         private String projectName;
-        private String mainDeviceId;
+        private String address;
         private String status;
+        private String manager;
         private Date createdAt;
         private Date updatedAt;
     }

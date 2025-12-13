@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.devicedatadisplayplatform.module.customer.mapper.ProjectMapper">
-    <!-- 
-        由于我们使用 MyBatis Plus 的 selectPage 方法进行分页，
-        无需在此定义额外的分页 SQL，BaseMapper 已提供分页功能
-    -->
-</mapper>

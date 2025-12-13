@@ -1,7 +1,7 @@
-package com.devicedatadisplayplatform.module.customer.mapper;
+package com.devicedatadisplayplatform.module.siteasset.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.devicedatadisplayplatform.module.customer.domain.Project;
+import com.devicedatadisplayplatform.module.siteasset.domain.Project;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

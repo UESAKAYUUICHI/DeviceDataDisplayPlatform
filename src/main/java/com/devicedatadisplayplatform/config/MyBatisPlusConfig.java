@@ -13,7 +13,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan("com.devicedatadisplayplatform.module.customer.mapper")
+@MapperScan("com.devicedatadisplayplatform.module.*.mapper")
 public class MyBatisPlusConfig {
 
 

@@ -2,6 +2,7 @@ package com.devicedatadisplayplatform.module.customer.DTO;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -14,12 +15,30 @@ public class UserGetPermissionDTO {
 
     @Data
     public static class ProjectDTO {
-        private Integer projectId;
+        private String projectId;
         private String projectName;
-        private String mainDeviceId;
-        private String status;
-        private Date createdAt;
-        private Date updatedAt;
+        private Long deptId;
+        private String address;
+        private String manager;
+        private String phone;
+        private Integer projectType;
+        private Integer protocolType;
+        private String owner;
+        private Integer lineNum;
+        private BigDecimal capacity;
+        private Integer status;
+        private BigDecimal power;
+        private String projectMold;
+        private BigDecimal energyDay;
+        private BigDecimal energyMonth;
+        private BigDecimal energyYear;
+        private String province;
+        private Integer delFlag;
+        private String password;
+        private String photo;
+        private Date startRunningDate;
+        private Date createTime;
+        private Date updateTime;
     }
 
     @Data

@@ -1,4 +1,4 @@
-package com.devicedatadisplayplatform.module.customer.Form;
+package com.devicedatadisplayplatform.module.customer.form;
 
 import lombok.Data;
 

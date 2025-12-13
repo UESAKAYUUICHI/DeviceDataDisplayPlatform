@@ -1,11 +1,11 @@
-package com.devicedatadisplayplatform.module.customer.service.impl;
+package com.devicedatadisplayplatform.module.siteasset.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.devicedatadisplayplatform.module.customer.domain.Project;
-import com.devicedatadisplayplatform.module.customer.mapper.ProjectMapper;
-import com.devicedatadisplayplatform.module.customer.service.ProjectService;
+import com.devicedatadisplayplatform.module.siteasset.domain.Project;
+import com.devicedatadisplayplatform.module.siteasset.mapper.ProjectMapper;
+import com.devicedatadisplayplatform.module.siteasset.service.ProjectService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +38,7 @@ public class ProjectServiceImpl implements ProjectService {
      *  根据ID获取项目
      * */
     @Override
-    public Project getProjectById(Integer projectId) {
+    public Project getProjectById(String projectId) {
         return projectMapper.selectById(projectId);
     }
     
@@ -71,7 +71,7 @@ public class ProjectServiceImpl implements ProjectService {
      *  删除项目
      * */
     @Override
-    public Boolean deleteProject(Integer projectId){
+    public Boolean deleteProject(String projectId){
         return projectMapper.deleteById(projectId) > 0;
     }
 }

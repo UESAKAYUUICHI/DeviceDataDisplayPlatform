@@ -1,11 +1,11 @@
-package com.devicedatadisplayplatform.module.customer.controller;
+package com.devicedatadisplayplatform.module.siteasset.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.devicedatadisplayplatform.common.result.Result;
 import com.devicedatadisplayplatform.common.util.ConvertUtil;
-import com.devicedatadisplayplatform.module.customer.Form.ProjectForm;
-import com.devicedatadisplayplatform.module.customer.domain.Project;
-import com.devicedatadisplayplatform.module.customer.service.ProjectService;
+import com.devicedatadisplayplatform.module.siteasset.form.ProjectForm;
+import com.devicedatadisplayplatform.module.siteasset.domain.Project;
+import com.devicedatadisplayplatform.module.siteasset.service.ProjectService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +33,7 @@ public class ProjectController {
     }
     
     @GetMapping("/getProject")
-    public Result<Project> getProjectById(@RequestParam Integer projectId) {
+    public Result<Project> getProjectById(@RequestParam String projectId) {
         Project project = projectService.getProjectById(projectId);
         return Result.ok(project);
     }
@@ -61,7 +61,7 @@ public class ProjectController {
     }
 
     @GetMapping("/deleteProject")
-    public Result<String> deleteProject(@RequestParam Integer projectId) {
+    public Result<String> deleteProject(@RequestParam String projectId) {
         boolean success = projectService.deleteProject(projectId);
         if (success) {
             return Result.ok("项目删除成功");

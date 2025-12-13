@@ -3,7 +3,7 @@ package com.devicedatadisplayplatform.module.customer.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.devicedatadisplayplatform.common.result.Result;
 import com.devicedatadisplayplatform.common.util.ConvertUtil;
-import com.devicedatadisplayplatform.module.customer.Form.PermissionForm;
+import com.devicedatadisplayplatform.module.customer.form.PermissionForm;
 import com.devicedatadisplayplatform.module.customer.domain.Permission;
 import com.devicedatadisplayplatform.module.customer.service.PermissionService;
 import jakarta.annotation.Resource;

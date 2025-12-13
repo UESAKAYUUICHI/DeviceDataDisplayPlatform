@@ -1,7 +1,7 @@
-package com.devicedatadisplayplatform.module.customer.service;
+package com.devicedatadisplayplatform.module.siteasset.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.devicedatadisplayplatform.module.customer.domain.Project;
+import com.devicedatadisplayplatform.module.siteasset.domain.Project;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public interface ProjectService {
     /*
      *  根据ID获取项目
      * */
-    Project getProjectById(Integer projectId);
+    Project getProjectById(String projectId);
 
     /*
      *  新增项目
@@ -35,5 +35,5 @@ public interface ProjectService {
     /*
      *  删除项目
      * */
-    Boolean deleteProject(Integer projectId);
+    Boolean deleteProject(String projectId);
 }
