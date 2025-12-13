@@ -5,7 +5,11 @@ import com.devicedatadisplayplatform.module.customer.domain.User;
 
 import java.util.List;
 
-
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户类服务层
+ * Time 2025/12/12
+ */
 public interface UserService {
     List<User> getAllUsers();
     

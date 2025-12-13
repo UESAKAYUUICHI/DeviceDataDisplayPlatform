@@ -6,6 +6,11 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 通过用户联级查询 权限 和 关联项目 实体类
+ * Time 2025/12/12
+ */
 @Data
 public class UserGetPermissionDTO {
     private Integer userId;
@@ -15,7 +20,7 @@ public class UserGetPermissionDTO {
 
     @Data
     public static class ProjectDTO {
-        private String projectId;
+        private Integer projectId;
         private String projectName;
         private Long deptId;
         private String address;

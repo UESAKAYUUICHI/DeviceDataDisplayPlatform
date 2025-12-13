@@ -11,6 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目服务层实现类
+ * Time 2025/12/13
+ */
 @Service
 public class ProjectServiceImpl implements ProjectService {
 
@@ -38,7 +43,7 @@ public class ProjectServiceImpl implements ProjectService {
      *  根据ID获取项目
      * */
     @Override
-    public Project getProjectById(String projectId) {
+    public Project getProjectById(Integer projectId) {
         return projectMapper.selectById(projectId);
     }
     
@@ -71,7 +76,7 @@ public class ProjectServiceImpl implements ProjectService {
      *  删除项目
      * */
     @Override
-    public Boolean deleteProject(String projectId){
+    public Boolean deleteProject(Integer projectId){
         return projectMapper.deleteById(projectId) > 0;
     }
 }

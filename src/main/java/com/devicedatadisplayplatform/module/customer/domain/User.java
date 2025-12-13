@@ -8,6 +8,11 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户实体类
+ * Time 2025/12/12
+ */
 @Data
 @TableName("t_user")
 public class User {

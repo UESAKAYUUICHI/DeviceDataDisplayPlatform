@@ -10,7 +10,11 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目控制器
+ * Time 2025/12/13
+ */
 @RestController
 @RequestMapping("/project")
 public class ProjectController {
@@ -33,7 +37,7 @@ public class ProjectController {
     }
     
     @GetMapping("/getProject")
-    public Result<Project> getProjectById(@RequestParam String projectId) {
+    public Result<Project> getProjectById(@RequestParam Integer projectId) {
         Project project = projectService.getProjectById(projectId);
         return Result.ok(project);
     }
@@ -61,7 +65,7 @@ public class ProjectController {
     }
 
     @GetMapping("/deleteProject")
-    public Result<String> deleteProject(@RequestParam String projectId) {
+    public Result<String> deleteProject(@RequestParam Integer projectId) {
         boolean success = projectService.deleteProject(projectId);
         if (success) {
             return Result.ok("项目删除成功");

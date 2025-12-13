@@ -5,9 +5,14 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目前端表单类
+ * Time 2025/12/13
+ */
 @Data
 public class ProjectForm {
-    private String projectId;
+    private Integer projectId;
     private String projectName;
     private Long deptId;
     private String address;

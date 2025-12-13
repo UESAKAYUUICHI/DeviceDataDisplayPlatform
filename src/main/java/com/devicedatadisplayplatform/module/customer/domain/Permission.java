@@ -6,6 +6,12 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+
+/**
+ * Author UESAKAYUUICHI
+ * Message 权限实体类
+ * Time 2025/12/12
+ */
 @Data
 @TableName("t_permission")
 public class Permission {

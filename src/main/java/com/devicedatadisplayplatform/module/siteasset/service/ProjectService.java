@@ -5,6 +5,11 @@ import com.devicedatadisplayplatform.module.siteasset.domain.Project;
 
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目服务层
+ * Time 2025/12/13
+ */
 public interface ProjectService {
 
     /*
@@ -20,7 +25,7 @@ public interface ProjectService {
     /*
      *  根据ID获取项目
      * */
-    Project getProjectById(String projectId);
+    Project getProjectById(Integer projectId);
 
     /*
      *  新增项目
@@ -35,5 +40,5 @@ public interface ProjectService {
     /*
      *  删除项目
      * */
-    Boolean deleteProject(String projectId);
+    Boolean deleteProject(Integer projectId);
 }

@@ -10,6 +10,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户mapper
+ * Time 2025/12/12
+ */
 public interface UserMapper extends BaseMapper<User> {
     // 查询用户关联的项目列表 (通过 t_user_project 关联 t_project)
     @Select({

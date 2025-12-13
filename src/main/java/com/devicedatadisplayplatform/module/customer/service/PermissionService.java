@@ -5,6 +5,11 @@ import com.devicedatadisplayplatform.module.customer.domain.Permission;
 
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 权限服务层
+ * Time 2025/12/12
+ */
 public interface PermissionService {
     /**
      * 获取所有权限

@@ -6,6 +6,11 @@ import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户查询权限和项目 前端返回类
+ * Time 2025/12/12
+ */
 @Data
 public class UserGetPermissionVO {
     private Integer userId;
@@ -15,7 +20,7 @@ public class UserGetPermissionVO {
 
     @Data
     public static class ProjectDTO {
-        private String projectId;  // 修改为String类型
+        private Integer projectId;  // 修改为String类型
         private String projectName;
         private String address;
         private String status;

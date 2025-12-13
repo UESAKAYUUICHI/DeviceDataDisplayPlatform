@@ -6,6 +6,11 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户表单类
+ * Time 2025/12/12
+ */
 @Data
 public class UserForm {
 

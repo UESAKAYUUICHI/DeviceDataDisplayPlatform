@@ -11,6 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户服务层实现类
+ * Time 2025/12/12
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

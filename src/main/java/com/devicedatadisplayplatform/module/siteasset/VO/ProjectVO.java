@@ -1,10 +1,15 @@
-package com.devicedatadisplayplatform.module.siteasset.vo;
+package com.devicedatadisplayplatform.module.siteasset.VO;
 
 import lombok.Data;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目前端返回类
+ * Time 2025/12/13
+ */
 @Data
 public class ProjectVO {
-    private String projectId;
+    private Integer projectId;
     private String projectName;
     private Integer status;
 }

@@ -12,6 +12,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 用户查询 权限 和 项目 服务层实现类
+ * Time 2025/12/12
+ */
 @Service
 public class UserGetPermissionServiceImpl implements UserGetPermissionService {
 
@@ -20,7 +25,7 @@ public class UserGetPermissionServiceImpl implements UserGetPermissionService {
 
     @Override
     public UserGetPermissionDTO getUserGetPermission(Integer userId) {
-        // 1. 获取用户基本信息 (仅需 username)
+        // 1. 获取用户基本信息
         User user = userMapper.selectById(userId);
         if (user == null) {
             throw new IllegalArgumentException("用户不存在");

@@ -6,11 +6,16 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * Author UESAKAYUUICHI
+ * Message 项目实体类
+ * Time 2025/12/13
+ */
 @Data
 @TableName("t_project")
 public class Project {
-    @TableId(value = "project_id", type = IdType.NONE)
-    private String projectId;
+    @TableId(value = "project_id", type = IdType.AUTO)
+    private Integer projectId;
     
     @TableField("project_name")
     private String projectName;
